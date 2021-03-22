@@ -23,6 +23,7 @@ export default function SEO({ children, location, description, title, img }) {
     <Helmet>
       <html lang="en" />
       <title>{title}</title>
+      <link rel="stylesheet" href="https://use.typekit.net/ltj6ded.css" />
       <meta name="description" content={description} />
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
       <link rel="icon" href="./assets/images/icon.png" />
