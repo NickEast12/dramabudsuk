@@ -1,21 +1,37 @@
-# Nick Starter Gatsby
+<h1 align="center">
+ Nick Starter Gatsby
+</h1>
 
-This is a starter for Gatsby with the file structure and plugins already added
+## 🛠 Installation & Set Up
 
-## Installation
+1. Install the Gatsby CLI
 
-Use npm install to download the node_modules
+   ```sh
+   npm install -g gatsby-cli
+   ```
 
-```bash
+2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
-npm i
+   ```sh
+   nvm install
+   ```
 
-```
+3. Install dependencies
 
-## Contributing
+   ```sh
+   npm install
+   ```
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+4. Start the development server
 
-## License
+   ```sh
+   npm run dev
+   ```
 
-[MIT]
+## 🚀 Building and Running for Production
+
+1. Generate a full static production build
+
+   ```sh
+   npm run build
+   ```

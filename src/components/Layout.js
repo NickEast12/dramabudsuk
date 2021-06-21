@@ -1,42 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import 'normalize.css';
+import styles, { ThemeProvider } from 'styled-components';
+//* Local imports
 import GlobalStyles from '../styles/GlobalStyles';
 import Nav from './Nav';
-import Loader from './functional/Load';
+import Footer from './Footer';
 
-const Layout = ({ children, location }) => {
-  const isHome = location.pathname === '/';
-  const hasPath = location.pathname === '/*';
-  const [isLoading, setIsLoading] = useState(isHome);
-  useEffect(() => {
-    if (isLoading) {
-    }
-  }, [isLoading]);
+// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
+}
 
+const Layout = ({ children, alt }) => {
+  const i = true;
   return (
     <>
       <GlobalStyles />
-      {isLoading && isHome ? (
-        <Loader finishLoading={() => setIsLoading(false)} />
-      ) : (
-        <div>
-          <Nav isHome={isHome} />
-          <div>{children}</div>
-        </div>
-      )}
+      <Nav />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };
 
 export default Layout;
-
-// if (location.hash) {
-//   const id = location.hash.substring(1); // location.hash without the '#'
-//   setTimeout(() => {
-//     const el = document.getElementById(id);
-//     if (el) {
-//       el.scrollIntoView();
-//       el.focus();
-//     }
-//   }, 0);
-// }

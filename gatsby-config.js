@@ -18,6 +18,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-preload-fonts`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+        // path: path.join(__dirname, `src`, `assets`, 'images'),
+      },
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         typekit: {
@@ -40,6 +48,12 @@ module.exports = {
         icon: `./src/assets/images/icon.png`,
       },
     },
+    // {
+    //   resolve: `gatsby-transform-portable-text`,
+    //   options: {
+    //     extendTypes: [{ typeName: `SanityPost`, contentFieldName: "body" }],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -60,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-138434630-1',
+        trackingId: '1010101010',
         head: true,
       },
     },
@@ -68,7 +82,7 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-138434630-1',
+          trackingId: '1010101010',
           anonymize: true,
         },
         environments: ['production', 'development'],

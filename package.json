@@ -1,7 +1,7 @@
 {
-  "name": "nutracker-website",
+  "name": "2021-starter-gatsby",
   "private": false,
-  "description": "nutracker-website",
+  "description": "2021-starter-gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -71,6 +71,7 @@
     "react-share": "^4.4.0",
     "react-tsparticles": "^1.19.3",
     "react-youtube": "^7.13.1",
+    "smooth-scroll": "^16.1.3",
     "styled-components": "^5.2.1",
     "three": "^0.125.2",
     "vanta": "^0.5.21"
