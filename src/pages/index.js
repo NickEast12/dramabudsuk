@@ -12,6 +12,10 @@ import FlowerIcon from '../svgs/flower.svg'
 import AltFlowerIcon from '../svgs/alt-flower.svg'
 import FirstCTA from '../components/sections/FirstCTA'
 import Areas from '../components/sections/Areas'
+import Testimonial from '../components/sections/Testimonial'
+import FoundersNotes from '../components/sections/FoundersNotes'
+import WhatWeAreLookingFor from '../components/sections/WhatWeAreLookingFor'
+import SecondCTA from '../components/sections/SecondCTA'
 
 const index = ({ data }) => {
     const blogs = data.testing.nodes
@@ -29,6 +33,10 @@ const index = ({ data }) => {
             <Opportunity />
             <FirstCTA />
             <Areas />
+            <Testimonial />
+            <WhatWeAreLookingFor />
+            <FoundersNotes />
+            <SecondCTA />
         </Layout>
     )
 }

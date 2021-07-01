@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 import styled from 'styled-components'
 import FlowerIcon from '../../svgs/dramabuds-flower-white.svg'
 
@@ -42,17 +43,16 @@ const HeroStyles = styled.header`
                 width: 90%;
                 margin: var(--auto);
                 input {
-                    padding: 0.75rem 0;
+                    padding: 0.95rem 0;
                     border-radius: 5px 5px 0 0;
-                    border-bottom: 0;
-                    border: solid 4px var(--secondary);
+                    border: none;
                     text-align: center;
                 }
                 input::placeholder {
                     text-align: center;
                 }
                 button {
-                    padding: 0.75rem 0;
+                    padding: 0.95rem 0;
                     background: var(--secondary);
                     border: 0;
                     border-radius: 0 0 5px 5px;
@@ -78,18 +78,27 @@ const HeroStyles = styled.header`
     }
 `
 const Hero = () => {
-    const i = true
+    const [email, setEmail] = useState('')
+    function handleSubmit(e) {
+        e.preventDefault()
+        navigate('/get-started', {
+            state: { email },
+        })
+    }
     return (
         <HeroStyles>
             <div className="hero">
                 <h1>Join our franchise family</h1>
                 <p>Plant a seed. Watch it grow.</p>
-                <form action="">
+                <form action="" onSubmit={(e) => handleSubmit(e)}>
                     <div className="f-i">
                         <input
                             type="text"
                             name="email"
                             placeholder="Email address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                         <button type="submit">
                             <span>Get started</span>
