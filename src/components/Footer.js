@@ -8,8 +8,9 @@ import TwitterIcon from '../svgs/twitter.svg'
 
 const FooterStyles = styled.footer`
     width: 100%;
-    background: var(--first);
-    padding: 3rem 0 0 0;
+    background: var(--white);
+    padding: 1.5rem 0 0 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
     .footer {
         width: 90%;
         margin: var(--auto);
@@ -17,10 +18,7 @@ const FooterStyles = styled.footer`
         &__left {
             &__logo {
                 width: 90%;
-                background-color: var(--white);
                 margin: var(--auto);
-                padding: 0.5rem 1rem;
-                border-radius: 25px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -30,14 +28,12 @@ const FooterStyles = styled.footer`
             }
             p {
                 text-align: center;
-                color: var(--white);
                 margin-top: 1.5rem;
             }
             section {
                 text-align: center;
                 margin-top: 1.5rem;
                 h6 {
-                    color: var(--white);
                     font-weight: 700;
                 }
                 ul {
@@ -48,7 +44,6 @@ const FooterStyles = styled.footer`
                     li {
                         padding: 0.45rem 0;
                         a {
-                            color: var(--white);
                         }
                     }
                 }
@@ -57,7 +52,6 @@ const FooterStyles = styled.footer`
         &__right {
             margin-top: 1.5rem;
             h5 {
-                color: var(--white);
                 font-weight: 700;
                 font-size: 1.5rem;
                 text-align: center;
@@ -77,6 +71,7 @@ const FooterStyles = styled.footer`
                 }
                 input {
                     color: #000;
+                    background-color: var(--offWhite);
                     border-radius: 4.5px 4.5px 0 0;
                     border: 1px red var(--white);
                     line-height: 1.3;
@@ -95,7 +90,7 @@ const FooterStyles = styled.footer`
             p {
                 text-align: center;
                 margin-top: 1.5rem;
-                color: var(--white);
+
                 font-size: 1.2rem;
             }
             &__icons {
@@ -106,7 +101,7 @@ const FooterStyles = styled.footer`
                 svg {
                     width: 30px;
                     height: 30px;
-                    fill: var(--white);
+                    fill: var(--secondary);
                 }
             }
         }

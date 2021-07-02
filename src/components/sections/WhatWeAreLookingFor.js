@@ -36,7 +36,7 @@ const WhatWeAreLookingForStyles = styled.section`
                     align-items: center;
                     padding: 0.75rem 0;
                     font-weight: 200;
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                     line-height: 1.4;
                     svg {
                         width: 35px;
@@ -44,16 +44,6 @@ const WhatWeAreLookingForStyles = styled.section`
                         fill: var(--white);
                         margin-right: 10px;
                     }
-                    /* &:before {
-                        content: '';
-                        display: inline-block;
-                        height: 0.85rem;
-                        width: 0.85rem;
-                        background-image: url(${LeafIcon});
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        margin-right: 0.25rem;
-                    } */
                 }
             }
         }

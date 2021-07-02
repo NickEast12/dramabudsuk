@@ -6,7 +6,7 @@ const vars = css`
         --first: rgb(249, 48, 54);
         --secondary: rgb(93, 175, 74);
         --tertiary: rgb(249, 132, 55);
-        --offWhite: rgb(250, 250, 250);
+        --offWhite: rgb(246, 246, 246);
         --white: rgb(255, 255, 255);
         --black: rgb(0, 0, 0);
         //*Fonts

@@ -5,7 +5,7 @@ import QuoteIcon from '../../svgs/quote.svg'
 
 const TestimonialStyles = styled.section`
     width: 100%;
-    background-color: rgb(246, 246, 246);
+    background-color: var(--offWhite);
     padding: 3rem 0;
     .t-m {
         width: 90%;

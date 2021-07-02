@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
-import Layout from '../components/Layout'
-import typography from '../styles/Typography'
 import GlobalStyles from '../styles/GlobalStyles'
 import ArrowIcon from '../svgs/arrow-right.svg'
 
@@ -209,7 +207,7 @@ const GetStarted = ({ location }) => {
                                                 type="email"
                                                 name="email"
                                                 id="email"
-                                                value={email}
+                                                defaultValue={email}
                                                 required
                                             />
                                         ) : (
