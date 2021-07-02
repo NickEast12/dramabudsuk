@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import FlowerIcon from '../../svgs/dramabuds-flower-white.svg'
@@ -52,7 +53,9 @@ const FirstCTA = () => {
             <div className="f-cta">
                 <h4>Book a free no-obligation chat today</h4>
                 <button type="button" className="btn btn--alt">
-                    <span>Get started</span>
+                    <Link to="/get-started">
+                        <span>Get started</span>
+                    </Link>
                 </button>
                 <FlowerIcon id="flower-left" />
                 <FlowerIcon id="flower-right" />

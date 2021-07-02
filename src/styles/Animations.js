@@ -18,6 +18,9 @@ const Animations = css`
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         .nav__wrapper {
             padding: 0.5rem 0 !important;
+            @media only screen and (min-width: 1024px) {
+                padding: 0.75rem 0 !important;
+            }
             .nav__desktop {
                 ul {
                     li {

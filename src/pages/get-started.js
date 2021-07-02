@@ -233,6 +233,18 @@ const GetStarted = ({ location }) => {
                                 <button type="submit" className="btn btn--main">
                                     <span>Submit</span>
                                 </button>
+                                <a
+                                    href="/FranchisePack.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button
+                                        type="button"
+                                        className="btn btn--main"
+                                    >
+                                        <span>Download Franchise Pack</span>
+                                    </button>
+                                </a>
                                 <p className="legal">
                                     By contacting us your are agreeing to our{' '}
                                     <Link to="/privacy-policy">

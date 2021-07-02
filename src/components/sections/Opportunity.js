@@ -112,7 +112,7 @@ const OpportunityStyles = styled.section`
 const Opportunity = () => {
     const i = true
     return (
-        <OpportunityStyles id="opportunity">
+        <OpportunityStyles>
             <div className="o-p">
                 <h3>Why dramabuds?</h3>
                 <p>

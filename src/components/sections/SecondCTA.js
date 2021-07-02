@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -36,7 +37,9 @@ const SecondCTA = () => (
                 simple.
             </p>
             <button type="button" className="btn btn--main">
-                <span>Get started</span>
+                <Link to="/get-started">
+                    <span>Get started</span>
+                </Link>
             </button>
         </div>
     </SecondCTAStyles>

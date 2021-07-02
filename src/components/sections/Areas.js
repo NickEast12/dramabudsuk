@@ -85,6 +85,7 @@ const AreasStyles = styled.section`
                 display: grid;
                 grid-template-columns: 50% 1fr;
                 grid-template-areas: 'a b';
+                padding-bottom: 2rem;
                 .areas__map {
                     grid-area: b;
                     width: 100%;

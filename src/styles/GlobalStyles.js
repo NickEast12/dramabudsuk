@@ -60,6 +60,7 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     align-items: center;
     margin: 0 auto;
+    cursor: pointer;
     span {
         display: block;
         font-size: 1rem;
