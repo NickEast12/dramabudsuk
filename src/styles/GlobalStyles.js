@@ -92,7 +92,7 @@ const GlobalStyles = createGlobalStyle`
    }
    .f-a {
        position: relative;
-       overflow: clip;
+       overflow: hidden;
        width: 100%;
        height: 12rem;
        text-align: center;
@@ -112,7 +112,7 @@ const GlobalStyles = createGlobalStyle`
         }
    .f-a-a {
        position: relative;
-       overflow: clip;
+       overflow: hidden;
        width: 100%;
        height: 12rem;
        text-align: center;
