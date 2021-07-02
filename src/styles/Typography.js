@@ -2,12 +2,9 @@ import { css } from 'styled-components'
 
 const typography = css`
     html {
-        font-size: 18px;
-        @media only screen and (min-width: 375px) {
-            font-size: 19px !important;
-        }
+        font-size: 16px !important;
         @media only screen and (min-width: 414px) {
-            font-size: 19px !important;
+            font-size: 18px !important;
         }
         @media only screen and (min-width: 1280px) {
             font-size: 19px !important;

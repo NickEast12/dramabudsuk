@@ -24,8 +24,12 @@ const HeroStyles = styled.header`
         margin: var(--auto);
         max-width: var(--maxWidth);
         @media only screen and (min-width: 375px) {
-            height: 95vh;
-            padding-top: 5.5rem;
+            height: 85vh;
+            padding-top: 6rem;
+        }
+        @media only screen and (min-width: 414px) {
+            height: 80vh;
+            padding-top: 5rem;
         }
         h1 {
             text-align: center;

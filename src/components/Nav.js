@@ -100,7 +100,7 @@ const NavStyles = styled.nav`
         left: 0;
         margin: 0 auto;
         z-index: ${({ open }) => (open ? '500' : '-5')};
-
+        visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
         background-color: var(--secondary);
         clip-path: circle(0% at 93% 30px);
         transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
@@ -119,6 +119,7 @@ const NavStyles = styled.nav`
                     margin: 0 auto;
                     opacity: 0;
                     transform: translateY(-15px);
+                    z-index: ${({ open }) => (open ? '500' : '-5')};
                     &:nth-child(1) {
                         animation: ${({ open }) => (open ? 'liAnimation' : '')}
                             0.65s 0.5s forwards;
