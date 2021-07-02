@@ -100,7 +100,6 @@ const NavStyles = styled.nav`
         left: 0;
         margin: 0 auto;
         z-index: ${({ open }) => (open ? '500' : '-5')};
-        visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
         background-color: var(--secondary);
         clip-path: circle(0% at 93% 30px);
         transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
@@ -108,6 +107,8 @@ const NavStyles = styled.nav`
         &__wrapper {
             width: 100%;
             height: 100%;
+            visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+            z-index: ${({ open }) => (open ? '500' : '-5')};
             ul {
                 list-style: none;
                 padding: 7.5rem 0 0 0;
