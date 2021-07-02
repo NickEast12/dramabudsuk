@@ -99,7 +99,7 @@ const NavStyles = styled.nav`
         top: 0;
         left: 0;
         margin: 0 auto;
-        z-index: ${({ open }) => (open ? '500' : '-5')};
+        /* z-index: ${({ open }) => (open ? '500' : '-5')}; */
         background-color: var(--secondary);
         clip-path: circle(0% at 93% 30px);
         transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
