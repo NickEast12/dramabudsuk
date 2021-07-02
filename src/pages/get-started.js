@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import GlobalStyles from '../styles/GlobalStyles'
 import ArrowIcon from '../svgs/arrow-right.svg'
 
@@ -78,19 +78,47 @@ const GetStartedStyles = styled.section`
                     border: solid 1px rgba(0, 0, 0, 0.2);
                     border-radius: 4.5px;
                 }
-                button {
-                    margin: 1rem 0 0 0;
-                    padding: 1rem 0;
-                    width: 100%;
-                    border-radius: 5px;
-                    background-color: var(--secondary);
-                    span {
-                        font-size: 1rem;
+                .btn__wrapper {
+                    button {
+                        margin: 1rem 0 0 0;
+                        padding: 1rem 0;
+                        width: 100%;
+                        border-radius: 5px;
+                        background-color: var(--secondary);
+                        span {
+                            font-size: 1rem;
+                        }
+                        @media only screen and (min-width: 1024px) {
+                            width: 48%;
+                        }
                     }
-                    @media only screen and (min-width: 1024px) {
-                        width: 48%;
+                    a {
+                        margin: 1.5rem 0;
+                        display: block;
+                        span {
+                            text-decoration: underline var(--secondary);
+                            color: var(--secondary);
+                            font-size: 1.15rem;
+                        }
+                    }
+                    @media only screen and (min-width: 768px) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        button {
+                            height: 3rem;
+                            width: 100%;
+                        }
+                        a {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-left: 15px;
+                            padding-top: 4px;
+                        }
                     }
                 }
+
                 .legal {
                     text-align: center;
                     margin-top: 1rem;
@@ -102,10 +130,11 @@ const GetStartedStyles = styled.section`
                         text-align: left;
                     }
                 }
-                @media only screen and (min-width: 1200px) {
+                . @media only screen and (min-width: 1200px) {
                     width: 100%;
                 }
             }
+
             @media only screen and (min-width: 768px) {
                 width: 100%;
                 margin: var(--auto);
@@ -150,8 +179,10 @@ const GetStartedStyles = styled.section`
         }
     }
 `
-const GetStarted = ({ location }) => {
+const GetStarted = ({ location, data }) => {
     const { email } = location.state || ''
+    const file = data.allFile.edges[0].node.publicURL
+    console.log(file)
     return (
         <main>
             <GlobalStyles />
@@ -229,22 +260,23 @@ const GetStarted = ({ location }) => {
                                         />
                                     </div>
                                 </section>
-                                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                                <button type="submit" className="btn btn--main">
-                                    <span>Submit</span>
-                                </button>
-                                <a
-                                    href="/FranchisePack.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <div className="btn__wrapper">
                                     <button
-                                        type="button"
+                                        type="submit"
                                         className="btn btn--main"
                                     >
-                                        <span>Download Franchise Pack</span>
+                                        <span>Submit</span>
                                     </button>
-                                </a>
+                                    <a
+                                        href={file}
+                                        download
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <span>Download Franchise Pack</span>
+                                    </a>
+                                </div>
+
                                 <p className="legal">
                                     By contacting us your are agreeing to our{' '}
                                     <Link to="/privacy-policy">
@@ -269,7 +301,24 @@ const GetStarted = ({ location }) => {
 
 export default GetStarted
 
+export const query = graphql`
+    {
+        allFile(filter: { extension: { eq: "pdf" } }) {
+            edges {
+                node {
+                    publicURL
+                }
+            }
+        }
+    }
+`
+
 GetStarted.propTypes = {
+    data: PropTypes.shape({
+        allFile: PropTypes.shape({
+            edges: PropTypes.any,
+        }),
+    }),
     location: PropTypes.shape({
         state: PropTypes.shape({
             email: PropTypes.any,

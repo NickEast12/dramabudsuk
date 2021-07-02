@@ -30,6 +30,13 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pdf`,
+                path: `${__dirname}/src/assets/pdf`,
+            },
+        },
+        {
             resolve: `gatsby-source-sanity`,
             options: {
                 projectId: `u626xl7i`,
