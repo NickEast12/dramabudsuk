@@ -26,7 +26,6 @@ const NavStyles = styled.nav`
         &__logo {
             position: relative;
             z-index: 550;
-            z-index: ${({ open }) => (open ? '100' : '-22')} 0.65s 0.5s forwards;
             svg {
                 width: 185px;
                 background-color: var(--white);
@@ -83,6 +82,11 @@ const NavStyles = styled.nav`
                     }
                 }
             }
+            @media only screen and (min-width: 375px) {
+                section {
+                    padding: 5px 3px 1px 0;
+                }
+            }
         }
         &__desktop {
             display: none;
@@ -95,6 +99,8 @@ const NavStyles = styled.nav`
         top: 0;
         left: 0;
         margin: 0 auto;
+        z-index: ${({ open }) => (open ? '500' : '-5')};
+
         background-color: var(--secondary);
         clip-path: circle(0% at 93% 30px);
         transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
@@ -209,7 +215,9 @@ const Nav = () => {
             <div className={scroll ? 'scroll-active nav' : 'nav'}>
                 <div className="nav__wrapper">
                     <div className="nav__logo">
-                        <Logo />
+                        <Link to="/">
+                            <Logo />
+                        </Link>
                     </div>
                     <div
                         className="nav__hamburger"
@@ -253,9 +261,6 @@ const Nav = () => {
                         <li>
                             <Link to="/">
                                 <button type="button" className="btn btn--main">
-                                    <span>
-                                        <ArrowIcon />
-                                    </span>
                                     <span>Get started</span>
                                 </button>
                             </Link>

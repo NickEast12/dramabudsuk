@@ -131,11 +131,7 @@ const GlobalStyles = createGlobalStyle`
        }
         }
     a[aria-current="page"] {
-        color: var(--first);
-    }
-    .gatsby-image-wrapper img[src*=base64\\,] {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
+        /* color: var(--first); */
     }
 `
 

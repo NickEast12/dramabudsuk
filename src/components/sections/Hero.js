@@ -7,6 +7,7 @@ const HeroStyles = styled.header`
     width: 100%;
     background-color: var(--first);
     position: relative;
+    z-index: 15;
     &::after {
         width: 100%;
         height: 2rem;
@@ -22,7 +23,10 @@ const HeroStyles = styled.header`
         width: 90%;
         margin: var(--auto);
         max-width: var(--maxWidth);
-
+        @media only screen and (min-width: 375px) {
+            height: 95vh;
+            padding-top: 5.5rem;
+        }
         h1 {
             text-align: center;
             color: var(--white);
