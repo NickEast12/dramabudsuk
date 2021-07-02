@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { useState, useEffect } from 'react'
 import 'normalize.css'
 import styles, { ThemeProvider } from 'styled-components'
-//* Local import
+//* Local imports
 import GlobalStyles from '../styles/GlobalStyles'
 import Nav from './Nav'
 import Footer from './Footer'
@@ -17,7 +17,7 @@ const Layout = ({ children, alt }) => {
     return (
         <>
             <GlobalStyles />
-            <Nav />
+            <Nav className={alt ? 'alternative' : ''} />
             <main>{children}</main>
             <Footer />
         </>

@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
     const allBlogs = data.blogs.nodes
     const featuredBlog = data.featuredBlog.nodes[0]
     return (
-        <Layout>
+        <Layout alt>
             <BlogHeader />
             <BlogSection feaBlog={featuredBlog} filteredBlogs={allBlogs} />
             <BlogCTA />

@@ -275,16 +275,16 @@ const Nav = () => {
                                 <Link to="/#about">About</Link>
                             </li>
                             <li>
-                                <Link to="#opportunity">Opportunity</Link>
+                                <Link to="/#opportunity">Opportunity</Link>
                             </li>
                             <li>
-                                <Link to="#areas">Areas</Link>
+                                <Link to="/#areas">Areas</Link>
                             </li>
                             <li>
                                 <Link to="blog">Blog</Link>
                             </li>
                         </ul>
-                        <Link to="/">
+                        <Link to="/get-started">
                             <button type="button" className="btn">
                                 <span>Get started</span>
                             </button>
@@ -299,19 +299,30 @@ const Nav = () => {
                     </div>
                     <ul>
                         <li>
-                            <Link to="/#test">About</Link>
+                            <Link to="/#about" onClick={() => setOpen(!open)}>
+                                About
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/#opportunity">Opportunity</Link>
+                            <Link
+                                to="/#opportunity"
+                                onClick={() => setOpen(!open)}
+                            >
+                                Opportunity
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/#areas">Areas</Link>
+                            <Link to="/#areas" onClick={() => setOpen(!open)}>
+                                Areas
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/blog">Blog</Link>
+                            <Link to="/blog" onClick={() => setOpen(!open)}>
+                                Blog
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/">
+                            <Link to="/get-started">
                                 <button type="button" className="btn btn--main">
                                     <span>Get started</span>
                                 </button>
