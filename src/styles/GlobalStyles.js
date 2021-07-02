@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
         overflow: scroll;
         -webkit-font-smoothing: subpixel-antialiased !important; 
         text-rendering:optimizeLegibility !important;
+        scroll-behavior: smooth;
         
     }
     h1,h2,h3,h4,h5,h6 {
@@ -99,6 +100,9 @@ const GlobalStyles = createGlobalStyle`
        z-index: -5;
         margin: -5rem auto 0 auto;
         max-width: var(--maxWidth);
+        @media only screen and (min-width: 1280px) {
+            overflow: visible;
+        }
            svg {
             position: absolute;
             right: -5rem;
@@ -119,6 +123,9 @@ const GlobalStyles = createGlobalStyle`
        z-index: -5;
         margin: -7rem auto 0 auto;
         max-width: var(--maxWidth);
+        @media only screen and (min-width: 1280px) {
+            overflow: visible;
+        }
            svg {
             position: absolute;
             left: -5rem;

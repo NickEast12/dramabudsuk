@@ -24,12 +24,26 @@ const HeroStyles = styled.header`
         margin: var(--auto);
         max-width: var(--maxWidth);
         @media only screen and (min-width: 375px) {
-            height: 85vh;
+            height: 35rem;
             padding-top: 6rem;
         }
         @media only screen and (min-width: 414px) {
-            height: 80vh;
-            padding-top: 5rem;
+            height: 34rem;
+        }
+        @media only screen and (min-width: 500px) {
+            height: 31rem;
+        }
+        @media only screen and (min-width: 600px) {
+            height: 28rem;
+        }
+        @media only screen and (min-width: 768px) {
+            width: 80%;
+            padding-top: 7rem;
+        }
+        @media only screen and (min-width: 1024px) {
+            width: 80%;
+            padding-top: 7rem;
+            height: 25rem;
         }
         h1 {
             text-align: center;
@@ -68,6 +82,20 @@ const HeroStyles = styled.header`
                         color: var(--white);
                     }
                 }
+                @media only screen and (min-width: 600px) {
+                    flex-direction: row;
+                    input {
+                        flex: 1 0 auto;
+                        border-radius: 5px 0 0 5px;
+                    }
+                    button {
+                        width: 150px;
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+            }
+            @media only screen and (min-width: 768px) {
+                max-width: 600px;
             }
         }
         #flower-left {

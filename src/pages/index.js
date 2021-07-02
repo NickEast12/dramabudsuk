@@ -17,12 +17,17 @@ import FoundersNotes from '../components/sections/FoundersNotes'
 import WhatWeAreLookingFor from '../components/sections/WhatWeAreLookingFor'
 import SecondCTA from '../components/sections/SecondCTA'
 
+if (typeof window !== 'undefined') {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]')
+}
+
 const index = ({ data }) => {
     const blogs = data.testing.nodes
     return (
         <Layout>
             <Hero />
-            <Welcome />
+            <Welcome id="test" />
             <div className="f-a-a">
                 <AltFlowerIcon />
             </div>

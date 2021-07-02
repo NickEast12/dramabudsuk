@@ -15,6 +15,7 @@ const NavStyles = styled.nav`
     .nav {
         transition: var(--usual);
         &__wrapper {
+            max-width: var(--maxWidth);
             transition: var(--usual);
             width: 90%;
             margin: var(--auto);
@@ -87,9 +88,39 @@ const NavStyles = styled.nav`
                     padding: 5px 3px 1px 0;
                 }
             }
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
         }
         &__desktop {
             display: none;
+            @media only screen and (min-width: 768px) {
+                display: flex;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 350px;
+                    li {
+                        a {
+                            transition: color 0.35s ease;
+                            color: var(--white);
+                        }
+                    }
+                }
+                a {
+                    button {
+                        padding: 0.75rem;
+                        background: var(--secondary);
+                        border-radius: 4.5px;
+                        border: none;
+                        span {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
         }
     }
     .mobile-menu {
@@ -187,6 +218,9 @@ const NavStyles = styled.nav`
                 }
             }
         }
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
     }
 `
 const Nav = () => {
@@ -237,8 +271,24 @@ const Nav = () => {
                     </div>
                     <div className="nav__desktop">
                         <ul>
-                            <li>item 1</li>
+                            <li>
+                                <Link to="/#about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="#opportunity">Opportunity</Link>
+                            </li>
+                            <li>
+                                <Link to="#areas">Areas</Link>
+                            </li>
+                            <li>
+                                <Link to="blog">Blog</Link>
+                            </li>
                         </ul>
+                        <Link to="/">
+                            <button type="button" className="btn">
+                                <span>Get started</span>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -249,16 +299,16 @@ const Nav = () => {
                     </div>
                     <ul>
                         <li>
-                            <Link to="/">Opportunity</Link>
+                            <Link to="/#test">About</Link>
                         </li>
                         <li>
-                            <Link to="/">About us</Link>
+                            <Link to="/#opportunity">Opportunity</Link>
                         </li>
                         <li>
-                            <Link to="/">Reviews</Link>
+                            <Link to="/#areas">Areas</Link>
                         </li>
                         <li>
-                            <Link to="/">Resources</Link>
+                            <Link to="/blog">Blog</Link>
                         </li>
                         <li>
                             <Link to="/">

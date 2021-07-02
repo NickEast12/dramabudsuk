@@ -29,8 +29,9 @@ const WelcomeStyles = styled.section`
         &__img {
             width: 95%;
             height: auto;
-            position: relative;
             margin: 0 0 0 auto;
+            position: relative;
+            max-width: 450px;
             .gatsby-image-wrapper {
                 border: solid 3px #151417;
                 border-radius: 5px;
@@ -49,13 +50,31 @@ const WelcomeStyles = styled.section`
                 border: solid 3px #151417;
             }
         }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.5rem;
+            padding: 4.5rem 0 0 0;
+            &__img {
+                .gatsby-image-wrapper {
+                    height: 100%;
+                }
+            }
+            &__text {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 `
 const Welcome = () => {
     const i = true
     return (
         <WelcomeStyles>
-            <div className="welcome">
+            <div className="welcome" id="about">
                 <div className="welcome__img">
                     <StaticImage
                         src="../../assets/images/welcome.jpeg"

@@ -10,6 +10,7 @@ const TestimonialStyles = styled.section`
     .t-m {
         width: 90%;
         margin: var(--auto);
+        max-width: var(--maxWidth);
         &__img {
             width: 90%;
             margin: var(--auto);
@@ -51,6 +52,21 @@ const TestimonialStyles = styled.section`
                     font-weight: 700;
                     color: var(--secondary);
                 }
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            &__text {
+                padding-top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                justify-content: center;
+            }
+            &__img {
+                max-width: 450px;
             }
         }
     }

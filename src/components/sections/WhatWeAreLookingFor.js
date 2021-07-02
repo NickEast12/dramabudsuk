@@ -10,6 +10,7 @@ const WhatWeAreLookingForStyles = styled.section`
     .c-h {
         width: 90%;
         margin: var(--auto);
+        max-width: var(--maxWidth);
         text-align: center;
         h4 {
             text-align: center;
@@ -23,6 +24,7 @@ const WhatWeAreLookingForStyles = styled.section`
     .careers {
         width: 90%;
         margin: var(--auto);
+        max-width: var(--maxWidth);
         &__text {
             margin-top: 1.5rem;
             background: var(--secondary);
@@ -51,6 +53,11 @@ const WhatWeAreLookingForStyles = styled.section`
             margin: 1.5rem auto 0 auto;
             width: 90%;
             position: relative;
+            section {
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
             .gatsby-image-wrapper {
                 border-radius: 4.5px;
                 border: solid 3px #151417;
@@ -67,6 +74,33 @@ const WhatWeAreLookingForStyles = styled.section`
                 background-color: var(--tertiary);
                 border: solid 3px #151417;
                 z-index: 2;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            &__text {
+                ul li {
+                    padding: 0.25rem 0;
+                }
+            }
+            &__img {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                section {
+                    position: relative;
+                    &:nth-child(2) {
+                        display: block;
+                        height: 10rem;
+                        .overlay {
+                            background-color: var(--first);
+                        }
+                    }
+                }
+                .gatsby-image-wrapper {
+                    height: 100%;
+                }
             }
         }
     }
@@ -142,12 +176,22 @@ const WhatWeAreLookingFor = () => {
                     </ul>
                 </div>
                 <div className="careers__img">
-                    <StaticImage
-                        src="../../assets/images/careers.jpeg"
-                        alt="A dinosaur"
-                        placeholder="blurred"
-                    />
-                    <div className="overlay" />
+                    <section>
+                        <StaticImage
+                            src="../../assets/images/careers.jpeg"
+                            alt="A dinosaur"
+                            placeholder="blurred"
+                        />
+                        <div className="overlay" />
+                    </section>
+                    <section>
+                        <StaticImage
+                            src="../../assets/images/fairybubbles.jpeg"
+                            alt="A dinosaur"
+                            placeholder="blurred"
+                        />
+                        <div className="overlay" />
+                    </section>
                 </div>
             </div>
         </WhatWeAreLookingForStyles>

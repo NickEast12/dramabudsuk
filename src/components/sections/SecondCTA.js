@@ -6,11 +6,12 @@ const SecondCTAStyles = styled.section`
     padding: 3rem 0;
     border-top: solid 1px rgba(0, 0, 0, 0.1);
     border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-    background-color: rgb(246, 246, 246);
+    background-color: var(--secondary);
     .s-cta {
         width: 90%;
         margin: var(--auto);
         max-width: var(--maxWidth);
+        color: var(--white);
         h5 {
             text-align: center;
             font-weight: 700;

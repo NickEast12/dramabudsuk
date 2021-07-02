@@ -86,6 +86,25 @@ const OurFranchiseStyles = styled.section`
                 line-height: 1.45;
             }
         }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'a b';
+            grid-gap: 1.5rem;
+            padding: 4.5rem 0;
+            &__img {
+                grid-area: b;
+
+                .gatsby-image-wrapper {
+                    height: 100%;
+                }
+            }
+            &__text {
+                margin-top: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 `
 const OurFranchise = () => {
@@ -138,7 +157,7 @@ const OurFranchise = () => {
                         the UK! And you can be a part of it with a dramabuds
                         franchise.
                     </p>
-                    <p>
+                    <p id="opportunity">
                         Yes, with this amazing increase in popularity from
                         families, schools, nurseries and anywhere you might find
                         children, dramabuds’ franchise opportunity has become a

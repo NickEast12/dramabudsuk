@@ -17,7 +17,7 @@ const FooterStyles = styled.footer`
         max-width: var(--maxWidth);
         &__left {
             &__logo {
-                width: 90%;
+                width: 250px;
                 margin: var(--auto);
                 display: flex;
                 align-items: center;
@@ -105,12 +105,56 @@ const FooterStyles = styled.footer`
                 }
             }
         }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem 0;
+            &__left {
+                &__logo {
+                    margin: 0 auto 0 0;
+                }
+                p {
+                    text-align: left;
+                }
+                section {
+                    text-align: left;
+                    ul {
+                        width: 250px;
+                    }
+                }
+            }
+            &__right {
+                margin-top: 0%;
+                h5 {
+                    text-align: right;
+                }
+                form {
+                    flex-direction: row;
+                    margin: 0 0 0 auto;
+                    input {
+                        border-radius: 4.5px 0 0 4.5px;
+                    }
+                    button {
+                        width: 185px;
+                        border-radius: 0 4.5px 4.5px 0;
+                    }
+                }
+                p {
+                    text-align: right;
+                }
+                &__icons {
+                    margin: 1rem 0 0 auto;
+                    max-width: 200px;
+                }
+            }
+        }
     }
     .legal {
         width: 100%;
-        background-color: var(--secondary);
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
         padding: 1rem 0;
         ul {
+            max-width: var(--maxWidth);
             width: 90%;
             margin: var(--auto);
             max-width: var(--maxWidth);
@@ -120,7 +164,7 @@ const FooterStyles = styled.footer`
             list-style: none;
             li {
                 a {
-                    color: var(--white);
+                    color: var(--black);
                     font-size: 0.85rem;
                 }
             }

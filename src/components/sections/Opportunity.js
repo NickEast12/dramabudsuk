@@ -45,6 +45,7 @@ const OpportunityStyles = styled.section`
                         text-align: center;
                         font-weight: 400;
                         margin-top: 0.5rem;
+                        font-size: 1.2rem;
                     }
                     svg {
                         width: 60px;
@@ -86,13 +87,34 @@ const OpportunityStyles = styled.section`
             }
         }
     }
+    @media only screen and (min-width: 768px) {
+        padding-top: 0;
+        .o-p {
+            > p {
+                max-width: 700px;
+                margin: var(--auto);
+                padding-top: 1rem;
+            }
+            &__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .o-p {
+            &__cards {
+                grid-template-columns: repeat(4, 1fr);
+                padding-bottom: 2rem;
+            }
+        }
+    }
 `
 const Opportunity = () => {
     const i = true
     return (
-        <OpportunityStyles>
+        <OpportunityStyles id="opportunity">
             <div className="o-p">
-                <h3>Why dramabuds? </h3>
+                <h3>Why dramabuds?</h3>
                 <p>
                     If you’re looking for a flexible career that’s rewarding,
                     fun and makes a difference to families in your local area,

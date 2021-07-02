@@ -38,6 +38,10 @@ const FoundersNotesStyles = styled.section`
             margin: 2rem auto 0 auto;
             border-radius: 4.5px;
             position: relative;
+            max-width: 450px;
+            section {
+                position: relative;
+            }
             .gatsby-image-wrapper {
                 border-radius: 4.5px;
                 border: solid 3px #151417;
@@ -54,6 +58,24 @@ const FoundersNotesStyles = styled.section`
                 background-color: var(--secondary);
                 border-radius: 4.5px;
                 z-index: 2;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            grid-gap: 2rem;
+            &__img {
+                padding-top: 2rem;
+                section {
+                    width: 100%;
+                    height: auto;
+                }
+                .gatsby-image-wrapper {
+                    width: 100%;
+                    height: 100%;
+                }
+                .overlay {
+                }
             }
         }
     }
@@ -88,12 +110,14 @@ const FoundersNotes = () => (
                 </section>
             </div>
             <div className="founders__img">
-                <StaticImage
-                    src="../../assets/images/rebeccawall.jpeg"
-                    alt="A dinosaur"
-                    placeholder="blurred"
-                />
-                <div className="overlay" />
+                <section>
+                    <StaticImage
+                        src="../../assets/images/rebeccawall.jpeg"
+                        alt="A dinosaur"
+                        placeholder="blurred"
+                    />
+                    <div className="overlay" />
+                </section>
             </div>
         </div>
     </FoundersNotesStyles>

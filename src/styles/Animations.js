@@ -18,6 +18,15 @@ const Animations = css`
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         .nav__wrapper {
             padding: 0.5rem 0 !important;
+            .nav__desktop {
+                ul {
+                    li {
+                        a {
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
         }
     }
     .menu-active {
