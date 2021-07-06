@@ -13,8 +13,10 @@ const SingleBlogStyles = styled.article`
             position: relative;
             .gatsby-image-wrapper {
                 width: 100%;
-                height: 15rem;
+                height: 250px;
                 border-radius: 8.5px 8.5px 0 0;
+                @media only screen and (min-width: 768px) {
+                }
             }
             .overlay {
                 position: absolute;
@@ -43,11 +45,11 @@ const SingleBlogStyles = styled.article`
             padding: 1rem;
             h4 {
                 font-weight: 700;
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             h2 {
                 margin: 0.5rem 0;
-                font-size: 2rem;
+                font-size: 1.75rem;
                 font-weight: 500;
             }
             > p {
@@ -89,10 +91,18 @@ const SingleBlogStyles = styled.article`
                     }
                     p {
                         font-weight: 700;
-                        margin-top: 0.25rem;
                     }
                 }
             }
+        }
+        border: transparent 2px solid;
+        border-radius: 8.5px;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            border: solid #600eff 2px;
+            transform: translateY(-10px);
+        }
+        a {
         }
     }
 `
@@ -102,7 +112,7 @@ const SingleBlog = ({ data }) => {
     return (
         <SingleBlogStyles>
             <div className="fea">
-                <Link to={data.slug.current}>
+                <Link to={`/blog/${data.slug.current}`}>
                     <div className="fea__img">
                         <Image data={data} />
                     </div>

@@ -22,7 +22,7 @@ const FirstCTAStyles = styled.section`
         padding: 1rem 1rem 2rem 1rem;
         border-radius: 4.5px;
         margin: var(--auto);
-        max-width: var(--maxWidth);
+        max-width: 900px;
         h4 {
             text-align: center;
             color: var(--white);
@@ -36,6 +36,12 @@ const FirstCTAStyles = styled.section`
             position: absolute;
             bottom: 0;
             left: 0;
+            @media only screen and (min-width: 768px) {
+                width: 60px;
+            }
+            @media only screen and (min-width: 1280px) {
+                width: 70px;
+            }
         }
         #flower-right {
             width: 50px;
@@ -43,6 +49,12 @@ const FirstCTAStyles = styled.section`
             bottom: 0;
             right: 0;
             transform: scaleX(-1);
+            @media only screen and (min-width: 768px) {
+                width: 60px;
+            }
+            @media only screen and (min-width: 1280px) {
+                width: 70px;
+            }
         }
     }
 `

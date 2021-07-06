@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { window } from 'browser-monads'
@@ -223,7 +224,7 @@ const NavStyles = styled.nav`
         }
     }
 `
-const Nav = () => {
+const Nav = ({ alt }) => {
     // ? Mobile nav
     const [open, setOpen] = useState(false)
     // ? Freeze window when nav is active
@@ -270,7 +271,7 @@ const Nav = () => {
                         </section>
                     </div>
                     <div className="nav__desktop">
-                        <ul>
+                        <ul className={alt ? 'altColour' : ''}>
                             <li>
                                 <Link to="/#about">About</Link>
                             </li>
@@ -281,7 +282,7 @@ const Nav = () => {
                                 <Link to="/#areas">Areas</Link>
                             </li>
                             <li>
-                                <Link to="blog">Blog</Link>
+                                <Link to="/blog">Blog</Link>
                             </li>
                         </ul>
                         <Link to="/get-started">
@@ -344,6 +345,10 @@ const Nav = () => {
             </div>
         </NavStyles>
     )
+}
+
+Nav.propTypes = {
+    alt: PropTypes.any,
 }
 
 export default Nav

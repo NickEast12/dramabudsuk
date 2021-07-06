@@ -12,12 +12,12 @@ if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('a[href*="#"]')
 }
-const Layout = ({ children }) => {
+const Layout = ({ children, alt }) => {
     const i = true
     return (
         <>
             <GlobalStyles />
-            <Nav />
+            <Nav alt={alt ? 'alt' : ''} />
             <main>{children}</main>
             <Footer />
         </>

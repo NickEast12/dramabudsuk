@@ -11,7 +11,10 @@ const Blog = ({ data }) => {
     const featuredBlog = data.featuredBlog.nodes[0]
     return (
         <Layout alt>
-            <BlogHeader />
+            <BlogHeader
+                title="Blog"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            />
             <BlogSection feaBlog={featuredBlog} filteredBlogs={allBlogs} />
             <BlogCTA />
         </Layout>
@@ -98,7 +101,7 @@ export const blogQuery = graphql`
                             alt
                             asset {
                                 gatsbyImageData(
-                                    width: 200
+                                    width: 400
                                     placeholder: BLURRED
                                     formats: [AUTO, WEBP, AVIF]
                                 )
@@ -110,7 +113,7 @@ export const blogQuery = graphql`
                     alt
                     asset {
                         gatsbyImageData(
-                            width: 500
+                            width: 400
                             placeholder: BLURRED
                             formats: [AUTO, WEBP, AVIF]
                         )

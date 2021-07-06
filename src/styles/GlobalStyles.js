@@ -92,6 +92,11 @@ const GlobalStyles = createGlobalStyle`
            color: var(--first);
        }
    }
+   .altColour {
+       a {
+        color: #000!important;
+       }
+   }
    .f-a {
        position: relative;
        overflow: hidden;
@@ -101,7 +106,7 @@ const GlobalStyles = createGlobalStyle`
        z-index: -5;
         margin: -5rem auto 0 auto;
         max-width: var(--maxWidth);
-        @media only screen and (min-width: 1280px) {
+        @media only screen and (min-width: 1090px) {
             overflow: visible;
         }
            svg {
@@ -124,7 +129,7 @@ const GlobalStyles = createGlobalStyle`
        z-index: -5;
         margin: -7rem auto 0 auto;
         max-width: var(--maxWidth);
-        @media only screen and (min-width: 1280px) {
+        @media only screen and (min-width: 1090px) {
             overflow: visible;
         }
            svg {

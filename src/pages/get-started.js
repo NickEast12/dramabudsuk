@@ -130,7 +130,7 @@ const GetStartedStyles = styled.section`
                         text-align: left;
                     }
                 }
-                . @media only screen and (min-width: 1200px) {
+                @media only screen and (min-width: 1200px) {
                     width: 100%;
                 }
             }
@@ -190,13 +190,14 @@ const GetStarted = ({ location, data }) => {
                 <div className="g-s">
                     <div className="g-s__form">
                         <div className="g-s__form--flex">
-                            <Link to="/">
-                                <ArrowIcon />
-                            </Link>
-
+                            <span>
+                                <Link to="/">
+                                    <ArrowIcon />
+                                </Link>
+                            </span>
                             <h1>Let's get some info</h1>
                             <p>
-                                f you want to find out more about starting your
+                                If you want to find out more about starting your
                                 dramabuds franchise journey, we’d love to hear
                                 from you.
                             </p>

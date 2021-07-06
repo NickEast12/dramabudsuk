@@ -22,6 +22,18 @@ const BlogSectionStyles = styled.section`
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 2rem;
+            @media only screen and (min-width: 768px) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1rem;
+            }
+        }
+        span {
+            a {
+                button {
+                    width: 150px;
+                    margin-top: 2rem;
+                }
+            }
         }
     }
 `
@@ -38,6 +50,13 @@ const BlogSection = ({ feaBlog, filteredBlogs }) => {
                         <SingleBlog data={blog} key={blog.id} />
                     ))}
                 </div>
+                <span>
+                    <Link to="/all-blogs">
+                        <button type="button" className="btn btn--main">
+                            <span>View more</span>
+                        </button>
+                    </Link>
+                </span>
             </div>
         </BlogSectionStyles>
     )
@@ -54,12 +73,25 @@ const FeaturedBlogStyles = styled.article`
     width: 100%;
     .fea {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: transparent 2px solid;
+        border-radius: 8.5px;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            border: solid #600eff 2px;
+            transform: translateY(-10px);
+        }
         &__img {
             position: relative;
+            width: 100%;
+            height: 100%;
             .gatsby-image-wrapper {
                 width: 100%;
-                height: 15rem;
+                height: 250px;
                 border-radius: 8.5px 8.5px 0 0;
+                @media only screen and (min-width: 768px) {
+                    border-radius: 8.5px 0 0 8.5px;
+                    height: 100%;
+                }
             }
             .overlay {
                 position: absolute;
@@ -79,6 +111,9 @@ const FeaturedBlogStyles = styled.article`
                 }
                 p {
                     color: var(--white);
+                }
+                @media only screen and (min-width: 414px) {
+                    width: 120px;
                 }
             }
         }
@@ -134,9 +169,23 @@ const FeaturedBlogStyles = styled.article`
                     }
                     p {
                         font-weight: 700;
-                        margin-top: 0.25rem;
                     }
                 }
+                @media only screen and (min-width: 768px) {
+                    padding-top: 2rem;
+                }
+            }
+            @media only screen and (min-width: 768px) {
+                border-radius: 0 8.5px 8.5px 0;
+                padding-top: 2rem;
+            }
+            /* padding: 1.5rem 2rem; */
+        }
+        @media only screen and (min-width: 768px) {
+            a {
+                height: 16.5rem;
+                display: grid;
+                grid-template-columns: 45% 1fr;
             }
         }
     }

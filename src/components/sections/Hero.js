@@ -103,6 +103,12 @@ const HeroStyles = styled.header`
             position: absolute;
             bottom: 0;
             left: 0;
+            @media only screen and (min-width: 768px) {
+                width: 60px;
+            }
+            @media only screen and (min-width: 1280px) {
+                width: 90px;
+            }
         }
         #flower-right {
             width: 50px;
@@ -110,6 +116,12 @@ const HeroStyles = styled.header`
             bottom: 0;
             right: 0;
             transform: scaleX(-1);
+            @media only screen and (min-width: 768px) {
+                width: 60px;
+            }
+            @media only screen and (min-width: 1280px) {
+                width: 90px;
+            }
         }
     }
 `
