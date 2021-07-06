@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import MedalIcon from '../../svgs/medal.svg'
+import CareerIcon from '../../svgs/directions.svg'
+import BusinessIcon from '../../svgs/idea.svg'
+import DevelopIcon from '../../svgs/rocket.svg'
+import AreaIcon from '../../svgs/placeholder.svg'
 
 const OpportunityStyles = styled.section`
     width: 100%;
@@ -97,6 +100,12 @@ const OpportunityStyles = styled.section`
             }
             &__cards {
                 grid-template-columns: repeat(2, 1fr);
+                section {
+                    height: 100%;
+                    align-items: center;
+                    justify-content: baseline;
+                    padding: 1rem 0.75rem;
+                }
             }
         }
     }
@@ -126,29 +135,29 @@ const Opportunity = () => {
                 <div className="o-p__cards">
                     <div className="o-p__cards__single">
                         <section>
-                            <MedalIcon />
+                            <CareerIcon />
                             <h6>Flexible, rewarding career</h6>
                         </section>
                         <div className="overlay" />
                     </div>
                     <div className="o-p__cards__single">
                         <section>
-                            <MedalIcon />
-                            <h6>Flexible, rewarding career</h6>
+                            <BusinessIcon />
+                            <h6>Run your own small business</h6>
                         </section>
                         <div className="overlay" />
                     </div>
                     <div className="o-p__cards__single">
                         <section>
-                            <MedalIcon />
-                            <h6>Flexible, rewarding career</h6>
+                            <DevelopIcon />
+                            <h6>Help children grow and develop</h6>
                         </section>
                         <div className="overlay" />
                     </div>
                     <div className="o-p__cards__single">
                         <section>
-                            <MedalIcon />
-                            <h6>Flexible, rewarding career</h6>
+                            <AreaIcon />
+                            <h6>Make a difference in your area</h6>
                         </section>
                         <div className="overlay" />
                     </div>

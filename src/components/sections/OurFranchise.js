@@ -7,6 +7,9 @@ const OurFranchiseStyles = styled.section`
     padding: 0 0 3rem 0;
     overflow: hidden;
     margin-top: -3rem;
+    @media only screen and (min-width: 768px) {
+        margin-top: 8rem;
+    }
     .o-f {
         width: 90%;
         margin: var(--auto);
@@ -94,7 +97,7 @@ const OurFranchiseStyles = styled.section`
             padding: 4.5rem 0;
             &__img {
                 grid-area: b;
-
+                grid-template-rows: repeat(3, 150px);
                 .gatsby-image-wrapper {
                     height: 100%;
                 }
@@ -103,6 +106,7 @@ const OurFranchiseStyles = styled.section`
                 margin-top: 0;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
             }
         }
     }

@@ -119,7 +119,7 @@ const FooterStyles = styled.footer`
                 section {
                     text-align: left;
                     ul {
-                        width: 250px;
+                        width: 300px;
                     }
                 }
             }
@@ -144,7 +144,8 @@ const FooterStyles = styled.footer`
                 }
                 &__icons {
                     margin: 1rem 0 0 auto;
-                    max-width: 200px;
+                    max-width: 150px;
+                    justify-content: space-between;
                 }
             }
         }
@@ -185,22 +186,22 @@ const Footer = () => {
                         <h6>Quick links</h6>
                         <ul>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/#about">About</Link>
                             </li>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/#opportunity">Opportunity</Link>
                             </li>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/#areas">Areas</Link>
                             </li>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/blog">Blog</Link>
                             </li>
                             <li>
-                                <Link to="/">Link 1</Link>
+                                <Link to="/get-started">Get started</Link>
                             </li>
                         </ul>
                     </section>

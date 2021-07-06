@@ -124,13 +124,14 @@ const GlobalStyles = createGlobalStyle`
        position: relative;
        overflow: hidden;
        width: 100%;
-       height: 12rem;
+       height: 1rem;
        text-align: center;
        z-index: -5;
         margin: -7rem auto 0 auto;
         max-width: var(--maxWidth);
         @media only screen and (min-width: 1090px) {
             overflow: visible;
+            
         }
            svg {
             position: absolute;

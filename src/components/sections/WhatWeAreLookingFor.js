@@ -78,28 +78,38 @@ const WhatWeAreLookingForStyles = styled.section`
         }
         @media only screen and (min-width: 768px) {
             display: grid;
-            grid-template-columns: 50% 1fr;
+            grid-template-columns: 1fr 1fr;
+            /* width: 60%;
+            margin: var(--auto);
+            max-width: 600px; */
             &__text {
                 ul li {
                     padding: 0.25rem 0;
+                    font-size: 1.1rem;
                 }
             }
             &__img {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+
                 section {
-                    position: relative;
+                    &:nth-child(1) {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
                     &:nth-child(2) {
                         display: block;
-                        height: 10rem;
-                        .overlay {
-                            background-color: var(--first);
-                        }
+                        width: 100%;
+                        height: 100%;
                     }
                 }
                 .gatsby-image-wrapper {
                     height: 100%;
+                    width: 100%;
+                    border: solid 5px var(--secondary);
+                    border-radius: 20px;
                 }
             }
         }
@@ -182,7 +192,6 @@ const WhatWeAreLookingFor = () => {
                             alt="A dinosaur"
                             placeholder="blurred"
                         />
-                        <div className="overlay" />
                     </section>
                     <section>
                         <StaticImage
@@ -190,7 +199,6 @@ const WhatWeAreLookingFor = () => {
                             alt="A dinosaur"
                             placeholder="blurred"
                         />
-                        <div className="overlay" />
                     </section>
                 </div>
             </div>
