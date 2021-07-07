@@ -124,7 +124,7 @@ const GlobalStyles = createGlobalStyle`
        position: relative;
        overflow: hidden;
        width: 100%;
-       height: 1rem;
+       height: 12rem;
        text-align: center;
        z-index: -5;
         margin: -7rem auto 0 auto;

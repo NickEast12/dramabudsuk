@@ -6,9 +6,9 @@ const OurFranchiseStyles = styled.section`
     width: 100%;
     padding: 0 0 3rem 0;
     overflow: hidden;
-    margin-top: -3rem;
+    margin-top: -5rem;
     @media only screen and (min-width: 768px) {
-        margin-top: 8rem;
+        margin-top: -2rem;
     }
     .o-f {
         width: 90%;

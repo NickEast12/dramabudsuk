@@ -26,6 +26,9 @@ const SecondCTAStyles = styled.section`
             margin-top: 1.5rem;
         }
     }
+    @media only screen and (min-width: 768px) {
+        margin-top: 3rem;
+    }
 `
 const SecondCTA = () => (
     <SecondCTAStyles>

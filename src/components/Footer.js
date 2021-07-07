@@ -108,7 +108,7 @@ const FooterStyles = styled.footer`
         @media only screen and (min-width: 768px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding: 1rem 0;
+            padding: 1.5rem 0 3rem 0;
             &__left {
                 &__logo {
                     margin: 0 auto 0 0;
@@ -119,7 +119,7 @@ const FooterStyles = styled.footer`
                 section {
                     text-align: left;
                     ul {
-                        width: 300px;
+                        width: 350px;
                     }
                 }
             }
@@ -181,7 +181,7 @@ const Footer = () => {
                     <div className="footer__left__logo">
                         <FullLogo />
                     </div>
-                    <p>Some word that quickly summarise dramabuds </p>
+
                     <section>
                         <h6>Quick links</h6>
                         <ul>
