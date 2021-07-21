@@ -50,6 +50,7 @@ const WhatWeAreLookingForStyles = styled.section`
             }
         }
         &__img {
+            display: none;
             margin: 1.5rem auto 0 auto;
             width: 90%;
             position: relative;
@@ -78,7 +79,7 @@ const WhatWeAreLookingForStyles = styled.section`
         }
         @media only screen and (min-width: 768px) {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 55% 1fr;
             /* width: 60%;
             margin: var(--auto);
             max-width: 600px; */
@@ -112,6 +113,9 @@ const WhatWeAreLookingForStyles = styled.section`
                     border-radius: 20px;
                 }
             }
+        }
+        @media only screen and (min-width: 1024px) {
+            grid-template-columns: 60% 1fr;
         }
     }
 `
@@ -195,7 +199,7 @@ const WhatWeAreLookingFor = () => {
                     </section>
                     <section>
                         <StaticImage
-                            src="../../assets/images/fairybubbles.jpeg"
+                            src="../../assets/images/party.jpeg"
                             alt="A dinosaur"
                             placeholder="blurred"
                         />

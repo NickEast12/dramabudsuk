@@ -1,4 +1,4 @@
-import { StaticImage } from 'gatsby-plugin-image'
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 import QuoteIcon from '../../svgs/quote.svg'
@@ -6,7 +6,7 @@ import QuoteIcon from '../../svgs/quote.svg'
 const TestimonialStyles = styled.section`
     width: 100%;
     background-color: var(--offWhite);
-    padding: 3rem 0;
+    padding: 3rem 0 4rem 0;
     .t-m {
         width: 90%;
         margin: var(--auto);
@@ -14,7 +14,12 @@ const TestimonialStyles = styled.section`
         &__img {
             width: 90%;
             margin: var(--auto);
-            position: relative;
+            section {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .gatsby-image-wrapper {
                 border-radius: 4.5px;
                 border: solid 3px #151417;
@@ -41,6 +46,7 @@ const TestimonialStyles = styled.section`
             }
             h4 {
                 margin-top: 0.5rem;
+                font-size: 1.5rem;
                 span {
                     font-weight: 800;
                     font-size: inherit;
@@ -71,33 +77,40 @@ const TestimonialStyles = styled.section`
         }
     }
 `
-const Testimonial = () => {
+const Testimonial = ({ quote, strong, name, location, children }) => {
     const i = true
     return (
         <TestimonialStyles>
             <div className="t-m">
                 <div className="t-m__img">
-                    <StaticImage
-                        src="../../assets/images/rebeccawall.jpeg"
-                        alt="A dinosaur"
-                        placeholder="blurred"
-                    />
-                    <div className="overlay" />
+                    <section>
+                        {children}
+                        <div className="overlay" />
+                    </section>
                 </div>
                 <div className="t-m__text">
                     <QuoteIcon />
                     <h4>
-                        Quote from one of the franchisees reccomending others to{' '}
-                        <span>get involved</span>
+                        {quote}
+                        <span>{strong}</span>
                     </h4>
+
                     <section>
-                        <h6>Franchisee Name</h6>
-                        <p>Wallington, Surrey</p>
+                        <h6>{name}</h6>
+                        <p>{location}</p>
                     </section>
                 </div>
             </div>
         </TestimonialStyles>
     )
+}
+
+Testimonial.propTypes = {
+    children: PropTypes.any,
+    quote: PropTypes.any,
+    location: PropTypes.any,
+    name: PropTypes.any,
+    strong: PropTypes.any,
 }
 
 export default Testimonial

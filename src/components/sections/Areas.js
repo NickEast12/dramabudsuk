@@ -4,6 +4,29 @@ import UKIcon from '../../svgs/united-kingdom.svg'
 //* Local Imports
 import LeafIcon from '../../assets/images/leaf.svg'
 
+const areas = [
+    'Bath',
+    'Belfast',
+    'Birmingham',
+    'Blackpool',
+    'Bradford',
+    'Brighton',
+    'Bristol',
+    'Cambridge',
+    'Cardiff',
+    'Coventry',
+    'Edinburgh',
+    'Glasgow',
+    'Leeds',
+    'Leicester',
+    'Liverpool',
+    'London',
+    'Manchester',
+    'Oxford',
+    'Portsmouth',
+    'York',
+]
+
 const AreasStyles = styled.section`
     width: 100%;
     padding: 5rem 0 3rem 0;
@@ -103,14 +126,14 @@ const AreasStyles = styled.section`
                 /* grid-template-columns: 45% 1fr; */
 
                 .areas__list {
-                    padding: 1rem 0.5rem;
+                    /* padding: 1rem 0.5rem; */
                 }
                 .areas__map {
                     width: 100%;
 
                     height: 100%;
                     svg {
-                        height: 28rem;
+                        height: 26rem;
                         width: 100%;
                     }
                 }
@@ -119,7 +142,10 @@ const AreasStyles = styled.section`
     }
 `
 const Areas = () => {
-    const i = true
+    const halfData = Math.ceil(areas.length / 2)
+    const firstHalf = areas.slice(0, halfData)
+    const secondHalf = areas.slice(halfData, areas.length)
+    console.log(secondHalf)
     return (
         <AreasStyles id="areas">
             <div className="areas">
@@ -134,43 +160,22 @@ const Areas = () => {
                     </div>
                     <div className="areas__list">
                         <h5>
-                            We are looking for local leaders in these areas:
+                            We are looking for local leaders in areas all across
+                            the UK! These include:
                         </h5>
                         <div className="areas__list__wrapper">
                             <section>
-                                <h6>Surrey</h6>
                                 <ul>
-                                    <li>Sutton</li>
-                                    <li>Guildford</li>
-                                    <li>Dorking</li>
-                                    <li>Working</li>
+                                    {firstHalf.map((city) => (
+                                        <li key={city}>{city}</li>
+                                    ))}
                                 </ul>
                             </section>
                             <section>
-                                <h6>Surrey</h6>
                                 <ul>
-                                    <li>Sutton</li>
-                                    <li>Guildford</li>
-                                    <li>Dorking</li>
-                                    <li>Working</li>
-                                </ul>
-                            </section>
-                            <section>
-                                <h6>Surrey</h6>
-                                <ul>
-                                    <li>Sutton</li>
-                                    <li>Guildford</li>
-                                    <li>Dorking</li>
-                                    <li>Working</li>
-                                </ul>
-                            </section>
-                            <section>
-                                <h6>Surrey</h6>
-                                <ul>
-                                    <li>Sutton</li>
-                                    <li>Guildford</li>
-                                    <li>Dorking</li>
-                                    <li>Working</li>
+                                    {secondHalf.map((city) => (
+                                        <li key={city}>{city}</li>
+                                    ))}
                                 </ul>
                             </section>
                         </div>

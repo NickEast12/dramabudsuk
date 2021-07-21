@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
-import SEO from '../components/functional/SEO'
-import Logo from '../svgs/dramabuds-logo.svg'
-import ImgComp from '../components/functional/Image'
 import Hero from '../components/sections/Hero'
 import Welcome from '../components/sections/Welcome'
 import Opportunity from '../components/sections/Opportunity'
@@ -38,7 +36,18 @@ const index = ({ data }) => {
             <Opportunity />
             <FirstCTA />
             <Areas />
-            <Testimonial />
+            <Testimonial
+                quote="Dramabuds has a team of wonderful, supportive, hardworking and kind humans whose main focus and vision is centred around giving the children the best possible drama experience. If you have the same passion and vision and want an opportunity to start and grow a business, "
+                strong="Dramabuds is the perfect place to start."
+                name="Georgia Thompson"
+                location="Dramabuds, Wandsworth"
+            >
+                <StaticImage
+                    src="../assets/images/georgia.jpeg"
+                    alt="Georgia Thompson | Dramabuds Wandsworth "
+                    placeholder="blurred"
+                />
+            </Testimonial>
             <WhatWeAreLookingFor />
             <FoundersNotes />
             <SecondCTA />

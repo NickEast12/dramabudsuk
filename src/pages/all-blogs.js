@@ -33,7 +33,10 @@ const AllBlogs = ({ data }) => {
     console.log(allBlogs)
     return (
         <Layout alt>
-            <BlogHeader title="All Blogs" description="short page descrption" />
+            <BlogHeader
+                title="All Blogs"
+                description="The latest news from Dramabuds"
+            />
             <AllBlogSectionStyles>
                 <div className="blogs">
                     {allBlogs.map((blog) => (

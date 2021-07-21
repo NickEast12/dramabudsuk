@@ -136,8 +136,12 @@ const Hero = () => {
     return (
         <HeroStyles>
             <div className="hero">
-                <h1>Join our franchise family</h1>
-                <p>Plant a seed. Watch it grow.</p>
+                <h1>Join our franchise family today</h1>
+
+                <p>
+                    Use your email address and start your dramabuds franchise
+                    journey today.
+                </p>
                 <form action="" onSubmit={(e) => handleSubmit(e)}>
                     <div className="f-i">
                         <input

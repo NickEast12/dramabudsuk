@@ -146,6 +146,7 @@ const OurFranchise = () => {
                             src="../../assets/images/hookparty.jpeg"
                             alt="A dinosaur"
                             placeholder="blurred"
+                            cop
                         />
                         <div className="overlay" />
                     </div>
