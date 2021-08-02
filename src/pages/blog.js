@@ -15,7 +15,7 @@ const Blog = ({ data }) => {
   <Layout alt>
    <BlogHeader
     title="Blog"
-    description="Read the latest blogs from dramabuds UK."
+    description="Read the latest blogs from dramabuds UK"
    />
    <BlogSection feaBlog={featuredBlog} filteredBlogs={allBlogs} />
    <Testimonial
