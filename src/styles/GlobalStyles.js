@@ -143,7 +143,10 @@ const GlobalStyles = createGlobalStyle`
             opacity: 0.35;
            
        }
-        }
+    }
+    .hidden {
+        display: none;
+    }
     a[aria-current="page"] {
         /* color: var(--first); */
     }
