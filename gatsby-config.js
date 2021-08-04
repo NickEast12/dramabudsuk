@@ -112,7 +112,7 @@ module.exports = {
    resolve: 'gatsby-plugin-robots-txt',
    options: {
     host: 'https://dramabudsuk.co.uk/',
-    sitemap: 'https://dramabudsuk.co.uk//sitemap.xml',
+    sitemap: 'https://dramabudsuk.co.uk/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
    },
   },
