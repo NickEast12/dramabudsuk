@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import BlogCTA from '../components/sections/blogCTA'
 import BlogHeader from '../components/sections/blogHeader'
 import SingleBlog from '../components/sections/singleBlog'
+import SEO from '../components/functional/SEO'
 
 const AllBlogSectionStyles = styled.section`
  width: 100%;
