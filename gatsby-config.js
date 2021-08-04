@@ -20,8 +20,6 @@ module.exports = {
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-preload-fonts`,
   `gatsby-plugin-sitemap`,
-  `gatsby-plugin-preload-fonts`,
-
   {
    resolve: `gatsby-source-filesystem`,
    options: {
