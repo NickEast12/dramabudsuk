@@ -6,9 +6,9 @@ dotenv.config({
 })
 module.exports = {
  siteMetadata: {
-  title: `Enter`,
-  siteUrl: `https://wwww.nick-east.com`,
-  description: `Enter`,
+  title: `Dramabuds | Franchise Opportunity | Drama classes, theatre and singing lessons, creative stories and parties for children`,
+  siteUrl: `https://dramabudsuk.co.uk/`,
+  description: `Dramabuds is an exciting franchise opportunity for those that love drama school, the performing arts and want to make a change in children’s lives through theatre.`,
   twitter: `@comebacktothis`,
   image: `/icon.png`,
  },
@@ -63,9 +63,9 @@ module.exports = {
   {
    resolve: `gatsby-plugin-manifest`,
    options: {
-    name: `Nick East `,
-    short_name: `Nick East`,
-    description: `I'm a front-end web developer based in London, UK. With a love for designing and writing code.`,
+    name: `Dramabuds | Franchise Opportunity | Drama classes, theatre and singing lessons, creative stories and parties for children`,
+    short_name: `Dramabuds UK `,
+    description: `Dramabuds is an exciting franchise opportunity for those that love drama school, the performing arts and want to make a change in children’s lives through theatre.`,
     start_url: `/`,
     lang: `en`,
     background_color: `#162129`,
@@ -111,7 +111,7 @@ module.exports = {
   {
    resolve: 'gatsby-plugin-robots-txt',
    options: {
-    host: 'https://dramabudsuk.co.uk/',
+    host: 'https://dramabudsuk.co.uk',
     sitemap: 'https://dramabudsuk.co.uk/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
    },

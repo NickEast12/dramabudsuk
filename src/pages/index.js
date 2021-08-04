@@ -27,7 +27,7 @@ const index = ({ data }) => {
   <Layout>
    <SEO
     title="Dramabuds | Franchise Opportunity | Drama classes, theatre and singing lessons, creative stories and parties for children"
-    description="Dramabuds is an exciting franchise opportunity for those that love drama school, the performing arts and want to make a change in children’s lives through theatre. "
+    description="Dramabuds is an exciting franchise opportunity for those that love drama school, the performing arts and want to make a change in children’s lives through theatre."
    />
    <Hero />
    <Welcome id="test" />
