@@ -1,9 +1,16 @@
 import React from 'react'
 import Legal from '../components/sections/Legal'
 import Layout from '../components/Layout'
+import SEO from '../components/functional/SEO'
 
 const PrivacyPolicy = () => (
  <Layout alt>
+  <SEO
+   title="Cookie Policy | Start your franchise journey | Dramabuds"
+   description=" As is common practice with almost all professional websites this site uses
+   cookies, which are tiny files that are downloaded to your computer, to
+   improve your experience"
+  />
   <Legal title="Cookie Policy" date="28-Apr-2021">
    <section>
     <p>

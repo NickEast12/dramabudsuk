@@ -7,12 +7,17 @@ import BlogHeader from '../components/sections/blogHeader'
 import BlogSection from '../components/sections/blogSection'
 import BlogCTA from '../components/sections/blogCTA'
 import Testimonial from '../components/sections/Testimonial'
+import SEO from '../components/functional/SEO'
 
 const Blog = ({ data }) => {
  const allBlogs = data.blogs.nodes
  const featuredBlog = data.featuredBlog.nodes[0]
  return (
   <Layout alt>
+   <SEO
+    title="Dramabuds Blog | Start your franchise journey | Dramabuds"
+    description="Learn more about becoming a Dramabuds franchisee, where you can operate and grow your own Dramabuds business. Read our latest thoughts, stories and updates!"
+   />
    <BlogHeader
     title="Blog"
     description="Read the latest blogs from dramabuds UK"

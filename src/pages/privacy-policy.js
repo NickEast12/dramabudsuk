@@ -2,9 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Legal from '../components/sections/Legal'
 import Layout from '../components/Layout'
+import SEO from '../components/functional/SEO'
 
 const PrivacyPolicy = () => (
  <Layout alt>
+  <SEO
+   title="Privacy Policy | Start your franchise journey | Dramabuds"
+   description="This Privacy Policy describes the policies of Dramabuds UK, 125 Carshalton
+   Park Road Carshalton, Surrey SM5 3SJ, United Kingdom of Great Britain and
+   Northern Ireland."
+  />
   <Legal title="Privacy Policy" date="3rd August 2021">
    <section>
     <p>

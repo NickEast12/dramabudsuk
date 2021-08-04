@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { graphql, Link } from 'gatsby'
 import GlobalStyles from '../styles/GlobalStyles'
 import ArrowIcon from '../svgs/arrow-right.svg'
+import SEO from '../components/functional/SEO'
 
 const GetStartedStyles = styled.section`
  width: 100%;
@@ -182,9 +183,12 @@ const GetStartedStyles = styled.section`
 const GetStarted = ({ location, data }) => {
  const { email } = location.state || ''
  const file = data.allFile.edges[0].node.publicURL
- console.log(file)
  return (
   <main>
+   <SEO
+    title="Franchising Opportunity with Dramabuds | Get in touch | Dramabuds"
+    description="Fill out our form to receive more information about franchising with Dramabuds and get started on your franchise journey today!"
+   />
    <GlobalStyles />
    <GetStartedStyles>
     <div className="g-s">

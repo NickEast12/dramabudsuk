@@ -14,6 +14,7 @@ import Testimonial from '../components/sections/Testimonial'
 import FoundersNotes from '../components/sections/FoundersNotes'
 import WhatWeAreLookingFor from '../components/sections/WhatWeAreLookingFor'
 import SecondCTA from '../components/sections/SecondCTA'
+import SEO from '../components/functional/SEO'
 
 if (typeof window !== 'undefined') {
  // eslint-disable-next-line global-require
@@ -24,6 +25,10 @@ const index = ({ data }) => {
  const blogs = data.testing.nodes
  return (
   <Layout>
+   <SEO
+    title="Dramabuds | Franchise Opportunity | Drama classes, theatre and singing lessons, creative stories and parties for children"
+    description="Dramabuds is an exciting franchise opportunity for those that love drama school, the performing arts and want to make a change in children’s lives through theatre. "
+   />
    <Hero />
    <Welcome id="test" />
    <div className="f-a-a">
