@@ -19,7 +19,7 @@ module.exports = {
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-preload-fonts`,
-  `gatsby-plugin-sitemap`,
+  `gatsby-plugin-advanced-sitemap`,
   {
    resolve: `gatsby-source-filesystem`,
    options: {
@@ -109,8 +109,8 @@ module.exports = {
   {
    resolve: 'gatsby-plugin-robots-txt',
    options: {
-    host: 'https://dramabudsuk.co.uk',
-    sitemap: 'https://dramabudsuk.co.uk/sitemap.xml',
+    host: 'https://www.dramabudsuk.co.uk',
+    sitemap: 'https://www.dramabudsuk.co.uk/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
    },
   },
