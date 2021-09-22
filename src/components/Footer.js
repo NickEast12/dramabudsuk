@@ -234,13 +234,25 @@ const Footer = () => {
      </form>
      <p>www.dramabuds.co.uk</p>
      <div className="footer__right__icons">
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+       href="https://www.facebook.com/dramabudsUK"
+       target="_blank"
+       rel="noopener noreferrer"
+      >
        <FaceBookIcon />
       </a>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+       href="https://twitter.com/DramabudsUK"
+       target="_blank"
+       rel="noopener noreferrer"
+      >
        <TwitterIcon />
       </a>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+       href="https://www.instagram.com/dramabudsuk/"
+       target="_blank"
+       rel="noopener noreferrer"
+      >
        <InstagramIcon />
       </a>
      </div>
